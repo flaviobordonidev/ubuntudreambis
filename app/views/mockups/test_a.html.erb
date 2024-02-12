@@ -1,4 +1,13 @@
-<!--<h1>Pagina A di test</h1>-->
-<!--<p>this is the first test page</p>-->
-<h1><%= t "mockups.test_a.headline" %></h1>
-<p><%= t "mockups.test_a.first_paragraph" %></p>
+<h1> <%= t "mockups.test_a.headline" %> </h1>
+<p> <%= t "mockups.test_a.first_paragraph" %> </p>
+<hr/>
+<p> testo = "Sono Flavio, quando avevo 5 anni camminavo per la spiaggia" </p>
+<p> Data = 01/01/1975 </p>
+<p> Soldi = 123456789,12345 </p>
+<p> Soldi = 499999999,99999 </p>
+<p> Soldi (come li direbbe una persona) = 499999999,99999 </p>
+<br/>
+<p>
+  <%= link_to t("mockups.test_a.link_to_english"), params.permit(:locale).merge(locale: 'en') %> |
+  <%= link_to t("mockups.test_a.link_to_italian"), params.permit(:locale).merge(locale: 'it') %>
+</p>

@@ -32,3 +32,5 @@ it:
     test_a:
       headline: "Questa è l'homepage"
       first_paragraph: "il testo che leggi è preso da un 'file di traduzione' e questo significa che siamo pronti a supportare più lingue."
+      link_to_english: "Inglese"
+      link_to_italian: "Italiano"
