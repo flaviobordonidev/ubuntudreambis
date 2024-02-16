@@ -1,13 +1,24 @@
 <h1> <%= t "mockups.test_a.headline" %> </h1>
 <p> <%= t "mockups.test_a.first_paragraph" %> </p>
-<hr/>
-<p> testo = "Sono Flavio, quando avevo 5 anni camminavo per la spiaggia" </p>
-<p> Data = 01/01/1975 </p>
-<p> Soldi = 123456789,12345 </p>
-<p> Soldi = 499999999,99999 </p>
-<p> Soldi (come li direbbe una persona) = 499999999,99999 </p>
-<br/>
+<hr>
+<h3>Date and Time / Data e Ora</h3>
+<p>unformatted (Time.now) = <%= Time.now %></p>
+<p>yaml short (Time.now) =  <%= l Time.now, format: :short %></p>
+<p>yaml long      (Time.now) = <%= l Time.now, format: :long %></p>
+<p>yaml long ("...".to_datetime) = <%= l "2022-10-08 23:30:28 UTC".to_datetime, format: :long %></p>
+<p>yaml long ("...".to_date) = <%= l "2022-10-08 23:30:28 UTC".to_date, format: :long %></p>
+<hr>
+<h3>Currency / Soldi</h3>
+numero non formattato = 123456789,12345
+<br> numero formattato: <%= number_to_currency(123456789.12345) %>
+<br> numero formattato con 3 decimali: <%= number_to_currency(123456789.12345, precision: 3) %>
+<br> numero formattato con 4 decimali: <%= number_to_currency(123456789.12345, precision: 4) %>
+<br> numero formattato con 5 decimali: <%= number_to_currency(123456789.12345, precision: 5) %>
+<br>
 <p>
   <%= link_to t("mockups.test_a.link_to_english"), params.permit(:locale).merge(locale: 'en') %> |
   <%= link_to t("mockups.test_a.link_to_italian"), params.permit(:locale).merge(locale: 'it') %>
 </p>
+
+
+    <strong>Price:</strong>
